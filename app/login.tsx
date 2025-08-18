@@ -1,8 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function Login() {
+  const router = useRouter();
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
@@ -56,7 +57,7 @@ export default function Login() {
             </TouchableOpacity>
           </View>
           
-          <TouchableOpacity style={styles.loginButton}>
+          <TouchableOpacity style={styles.loginButton} onPress={() => router.replace('/(tabs)/Home')}>
             <Text style={styles.loginButtonText}>Đăng nhập</Text>
           </TouchableOpacity>
 

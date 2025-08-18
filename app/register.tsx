@@ -1,8 +1,9 @@
 import { Ionicons } from '@expo/vector-icons';
-import { Link } from 'expo-router';
+import { Link, useRouter } from 'expo-router';
 import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 
 export default function Register() {
+  const router = useRouter();
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
@@ -92,7 +93,7 @@ export default function Register() {
             </TouchableOpacity>
           </View>
           
-          <TouchableOpacity style={styles.registerButton}>
+          <TouchableOpacity style={styles.registerButton} onPress={() => router.replace('/(tabs)/Home')}>
             <Text style={styles.registerButtonText}>Đăng ký</Text>
           </TouchableOpacity>
 
