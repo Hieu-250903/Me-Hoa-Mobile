@@ -76,6 +76,11 @@ export default function Home() {
           <Ionicons name="car" size={24} color="#007AFF" />
           <Text style={styles.actionText}>Tài xế</Text>
         </Link>
+        
+        <Link href="/customer" style={styles.actionButton}>
+          <Ionicons name="person" size={24} color="#007AFF" />
+          <Text style={styles.actionText}>Hồ sơ</Text>
+        </Link>
       </View>
 
       {/* Vehicle Types */}
