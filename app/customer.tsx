@@ -223,7 +223,7 @@ export default function Customer() {
         {menuItems.map((item) => (
           <TouchableOpacity key={item.id} style={styles.menuItem}>
             <View style={[styles.menuIcon, { backgroundColor: item.color + '20' }]}>
-              <Ionicons name={item.icon} size={20} color={item.color} />
+              <Ionicons name={item.icon as any} size={20} color={item.color} />
             </View>
             <Text style={styles.menuTitle}>{item.title}</Text>
             <Ionicons name="chevron-forward" size={20} color="#666" />
