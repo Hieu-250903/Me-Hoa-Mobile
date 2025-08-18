@@ -4,7 +4,7 @@ import { Image, ScrollView, StyleSheet, Text, TouchableOpacity, View } from 'rea
 
 export default function Customer() {
   const customerInfo = {
-    name: 'Nguyễn Thị Mai',
+    name: 'Nguyễn Mẫn Hạnh Quyên',
     email: 'mai.nguyen@email.com',
     phone: '0905 123 456',
     avatar: 'https://via.placeholder.com/80x80/FF6B6B/FFFFFF?text=KH',
