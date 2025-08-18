@@ -1,0 +1,304 @@
+import { Ionicons } from '@expo/vector-icons';
+import { Link } from 'expo-router';
+import { ScrollView, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
+
+export default function Register() {
+  return (
+    <ScrollView style={styles.container}>
+      {/* Header */}
+      <View style={styles.header}>
+        <Text style={styles.headerTitle}>Đăng ký</Text>
+        <View style={styles.placeholder} />
+      </View>
+
+      {/* Logo Section */}
+      <View style={styles.logoSection}>
+        <View style={styles.logoContainer}>
+          <Ionicons name="person-add" size={60} color="#34C759" />
+        </View>
+        <Text style={styles.logoTitle}>Tạo tài khoản mới</Text>
+        <Text style={styles.logoSubtitle}>Tham gia Me Hoa Travel</Text>
+      </View>
+
+      {/* Form */}
+      <View style={styles.formContainer}>
+        <View style={styles.form}>
+          <View style={styles.inputContainer}>
+            <Ionicons name="person" size={20} color="#666" style={styles.inputIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Họ và tên"
+              autoCapitalize="words"
+              placeholderTextColor="#999"
+            />
+          </View>
+          
+          <View style={styles.inputContainer}>
+            <Ionicons name="mail" size={20} color="#666" style={styles.inputIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Email"
+              keyboardType="email-address"
+              autoCapitalize="none"
+              placeholderTextColor="#999"
+            />
+          </View>
+
+          <View style={styles.inputContainer}>
+            <Ionicons name="call" size={20} color="#666" style={styles.inputIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Số điện thoại"
+              keyboardType="phone-pad"
+              placeholderTextColor="#999"
+            />
+          </View>
+          
+          <View style={styles.inputContainer}>
+            <Ionicons name="lock-closed" size={20} color="#666" style={styles.inputIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Mật khẩu"
+              secureTextEntry
+              placeholderTextColor="#999"
+            />
+            <TouchableOpacity style={styles.eyeButton}>
+              <Ionicons name="eye" size={20} color="#666" />
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.inputContainer}>
+            <Ionicons name="lock-closed" size={20} color="#666" style={styles.inputIcon} />
+            <TextInput
+              style={styles.input}
+              placeholder="Xác nhận mật khẩu"
+              secureTextEntry
+              placeholderTextColor="#999"
+            />
+            <TouchableOpacity style={styles.eyeButton}>
+              <Ionicons name="eye" size={20} color="#666" />
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.termsSection}>
+            <TouchableOpacity style={styles.checkboxContainer}>
+              <View style={styles.checkbox}>
+                <Ionicons name="checkmark" size={16} color="white" />
+              </View>
+              <Text style={styles.termsText}>
+                Tôi đồng ý với <Text style={styles.termsLink}>Điều khoản sử dụng</Text> và{' '}
+                <Text style={styles.termsLink}>Chính sách bảo mật</Text>
+              </Text>
+            </TouchableOpacity>
+          </View>
+          
+          <TouchableOpacity style={styles.registerButton}>
+            <Text style={styles.registerButtonText}>Đăng ký</Text>
+          </TouchableOpacity>
+
+          {/* Social Register */}
+          <View style={styles.divider}>
+            <View style={styles.dividerLine} />
+            <Text style={styles.dividerText}>hoặc</Text>
+            <View style={styles.dividerLine} />
+          </View>
+
+          <TouchableOpacity style={styles.googleButton}>
+            <Ionicons name="logo-google" size={20} color="#DB4437" />
+            <Text style={styles.googleButtonText}>Đăng ký bằng Google</Text>
+          </TouchableOpacity>
+        </View>
+      </View>
+
+      {/* Links */}
+      <View style={styles.links}>
+        <View style={styles.loginSection}>
+          <Text style={styles.loginText}>Đã có tài khoản? </Text>
+          <Link href="/login" style={styles.link}>
+            <Text style={styles.loginLinkText}>Đăng nhập ngay</Text>
+          </Link>
+        </View>
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#f5f5f5',
+  },
+  header: {
+    backgroundColor: '#34C759',
+    paddingTop: 50,
+    paddingBottom: 20,
+    paddingHorizontal: 20,
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  backButton: {
+    padding: 5,
+  },
+  headerTitle: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    color: 'white',
+  },
+  placeholder: {
+    width: 34,
+  },
+  logoSection: {
+    alignItems: 'center',
+    paddingVertical: 30,
+  },
+  logoContainer: {
+    width: 100,
+    height: 100,
+    borderRadius: 50,
+    backgroundColor: 'white',
+    alignItems: 'center',
+    justifyContent: 'center',
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 5,
+    marginBottom: 15,
+  },
+  logoTitle: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    color: '#333',
+    marginBottom: 5,
+  },
+  logoSubtitle: {
+    fontSize: 16,
+    color: '#666',
+  },
+  formContainer: {
+    paddingHorizontal: 20,
+  },
+  form: {
+    backgroundColor: 'white',
+    borderRadius: 16,
+    padding: 20,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 8,
+    elevation: 3,
+  },
+  inputContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#f8f9fa',
+    borderRadius: 12,
+    marginBottom: 15,
+    paddingHorizontal: 15,
+    borderWidth: 1,
+    borderColor: '#e9ecef',
+  },
+  inputIcon: {
+    marginRight: 10,
+  },
+  input: {
+    flex: 1,
+    paddingVertical: 15,
+    fontSize: 16,
+    color: '#333',
+  },
+  eyeButton: {
+    padding: 5,
+  },
+  termsSection: {
+    marginBottom: 20,
+  },
+  checkboxContainer: {
+    flexDirection: 'row',
+    alignItems: 'flex-start',
+  },
+  checkbox: {
+    width: 20,
+    height: 20,
+    borderRadius: 4,
+    backgroundColor: '#34C759',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 10,
+    marginTop: 2,
+  },
+  termsText: {
+    fontSize: 14,
+    color: '#666',
+    flex: 1,
+    lineHeight: 20,
+  },
+  termsLink: {
+    color: '#34C759',
+    fontWeight: 'bold',
+  },
+  registerButton: {
+    backgroundColor: '#34C759',
+    paddingVertical: 16,
+    borderRadius: 12,
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  registerButtonText: {
+    color: 'white',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  divider: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 20,
+  },
+  dividerLine: {
+    flex: 1,
+    height: 1,
+    backgroundColor: '#e9ecef',
+  },
+  dividerText: {
+    marginHorizontal: 15,
+    fontSize: 14,
+    color: '#666',
+  },
+  googleButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: 'white',
+    paddingVertical: 16,
+    borderRadius: 12,
+    borderWidth: 1,
+    borderColor: '#e9ecef',
+    gap: 10,
+  },
+  googleButtonText: {
+    fontSize: 16,
+    color: '#333',
+    fontWeight: '500',
+  },
+  links: {
+    paddingHorizontal: 20,
+    paddingVertical: 20,
+    alignItems: 'center',
+  },
+  link: {
+    padding: 5,
+  },
+  loginSection: {
+    flexDirection: 'row',
+  },
+  loginText: {
+    fontSize: 14,
+    color: '#666',
+  },
+  loginLinkText: {
+    color: '#34C759',
+    fontSize: 14,
+    fontWeight: 'bold',
+  },
+});
