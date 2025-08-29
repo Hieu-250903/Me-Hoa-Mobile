@@ -66,9 +66,11 @@ export default function ForgotPassword() {
 
       {/* Links */}
       <View style={styles.links}>
-        <Link href="/login" style={styles.link}>
-          <Ionicons name="arrow-back" size={16} color="#007AFF" />
-          <Text style={styles.linkText}>Quay lại đăng nhập</Text>
+        <Link href="/login" asChild>
+          <TouchableOpacity style={styles.link}>
+            <Ionicons name="arrow-back" size={16} color="#007AFF" />
+            <Text style={styles.linkText}>Quay lại đăng nhập</Text>
+          </TouchableOpacity>
         </Link>
       </View>
     </ScrollView>

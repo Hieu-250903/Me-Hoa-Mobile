@@ -72,14 +72,18 @@ export default function Home() {
           <Text style={styles.actionText}>Đánh giá</Text>
         </TouchableOpacity>
         
-        <Link href="/driver" style={styles.actionButton}>
-          <Ionicons name="car" size={24} color="#007AFF" />
-          <Text style={styles.actionText}>Tài xế</Text>
+        <Link href="/driver" asChild>
+          <TouchableOpacity style={styles.actionButton}>
+            <Ionicons name="car" size={24} color="#007AFF" />
+            <Text style={styles.actionText}>Tài xế</Text>
+          </TouchableOpacity>
         </Link>
         
-        <Link href="/customer" style={styles.actionButton}>
-          <Ionicons name="person" size={24} color="#007AFF" />
-          <Text style={styles.actionText}>Hồ sơ</Text>
+        <Link href="/customer" asChild>
+          <TouchableOpacity style={styles.actionButton}>
+            <Ionicons name="person" size={24} color="#007AFF" />
+            <Text style={styles.actionText}>Hồ sơ</Text>
+          </TouchableOpacity>
         </Link>
       </View>
 
@@ -117,14 +121,18 @@ export default function Home() {
 
       {/* Auth Buttons */}
       <View style={styles.authSection}>
-        <Link href="/login" style={styles.authButton}>
-          <Ionicons name="log-in" size={20} color="white" />
-          <Text style={styles.authButtonText}>Đăng nhập</Text>
+        <Link href="/login" asChild>
+          <TouchableOpacity style={styles.authButton}>
+            <Ionicons name="log-in" size={20} color="white" />
+            <Text style={styles.authButtonText}>Đăng nhập</Text>
+          </TouchableOpacity>
         </Link>
         
-        <Link href="/register" style={[styles.authButton, styles.registerButton]}>
-          <Ionicons name="person-add" size={20} color="white" />
-          <Text style={styles.authButtonText}>Đăng ký</Text>
+        <Link href="/register" asChild>
+          <TouchableOpacity style={[styles.authButton, styles.registerButton]}>
+            <Ionicons name="person-add" size={20} color="white" />
+            <Text style={styles.authButtonText}>Đăng ký</Text>
+          </TouchableOpacity>
         </Link>
       </View>
 

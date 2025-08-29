@@ -77,14 +77,18 @@ export default function Login() {
 
       {/* Links */}
       <View style={styles.links}>
-        <Link href="/forgot-password" style={styles.link}>
-          <Text style={styles.linkText}>Quên mật khẩu?</Text>
+        <Link href="/forgot-password" asChild>
+          <TouchableOpacity style={styles.link}>
+            <Text style={styles.linkText}>Quên mật khẩu?</Text>
+          </TouchableOpacity>
         </Link>
         
         <View style={styles.registerSection}>
           <Text style={styles.registerText}>Chưa có tài khoản? </Text>
-          <Link href="/register" style={styles.link}>
-            <Text style={styles.registerLinkText}>Đăng ký ngay</Text>
+          <Link href="/register" asChild>
+            <TouchableOpacity style={styles.link}>
+              <Text style={styles.registerLinkText}>Đăng ký ngay</Text>
+            </TouchableOpacity>
           </Link>
         </View>
       </View>

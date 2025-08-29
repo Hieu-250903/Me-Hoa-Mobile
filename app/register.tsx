@@ -115,9 +115,11 @@ export default function Register() {
       <View style={styles.links}>
         <View style={styles.loginSection}>
           <Text style={styles.loginText}>Đã có tài khoản? </Text>
-          <Link href="/login" style={styles.link}>
+                  <Link href="/login" asChild>
+          <TouchableOpacity style={styles.link}>
             <Text style={styles.loginLinkText}>Đăng nhập ngay</Text>
-          </Link>
+          </TouchableOpacity>
+        </Link>
         </View>
       </View>
     </ScrollView>
