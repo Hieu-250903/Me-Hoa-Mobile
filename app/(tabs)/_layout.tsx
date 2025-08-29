@@ -21,7 +21,7 @@ export default function TabsLayout() {
       },
     }}>
       <Tabs.Screen
-        name="index"
+        name="Home"
         options={{
           title: 'Trang chủ',
           tabBarIcon: ({ color, size }) => (
@@ -30,7 +30,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="driver"
+        name="Driver"
         options={{
           title: 'Tài xế',
           tabBarIcon: ({ color, size }) => (
@@ -39,7 +39,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="customer"
+        name="Customer"
         options={{
           title: 'Hồ sơ',
           tabBarIcon: ({ color, size }) => (

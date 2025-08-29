@@ -75,7 +75,7 @@ export default function Driver() {
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerTop}>
-          <Link href="/Home" asChild>
+          <Link href="/(tabs)/Driver" asChild>  
             <TouchableOpacity style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>

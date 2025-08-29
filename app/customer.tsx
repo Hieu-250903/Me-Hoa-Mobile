@@ -75,7 +75,7 @@ export default function Customer() {
       {/* Header */}
       <View style={styles.header}>
         <View style={styles.headerTop}>
-          <Link href="/Home" asChild>
+          <Link href="/(tabs)/Home" asChild> 
             <TouchableOpacity style={styles.backButton}>
               <Ionicons name="arrow-back" size={24} color="white" />
             </TouchableOpacity>
