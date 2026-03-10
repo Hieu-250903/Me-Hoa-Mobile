@@ -59,7 +59,7 @@ export default function Login() {
           
           <TouchableOpacity
             style={styles.loginButton}
-            onPress={() => router.replace('/(tabs)/Home')}
+            onPress={() => router.replace('/Home')}
           >
             <Text style={styles.loginButtonText}>Đăng nhập</Text>
           </TouchableOpacity>

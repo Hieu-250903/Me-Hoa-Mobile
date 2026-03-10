@@ -95,7 +95,7 @@ export default function Register() {
           
           <TouchableOpacity
             style={styles.registerButton}
-            onPress={() => router.replace('/(tabs)/Home')}
+            onPress={() => router.replace('/Home')}
           >
             <Text style={styles.registerButtonText}>Đăng ký</Text>
           </TouchableOpacity>
