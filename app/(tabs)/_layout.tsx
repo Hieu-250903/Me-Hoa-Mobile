@@ -30,7 +30,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="Driver"
+        name="driver"
         options={{
           title: 'Tài xế',
           tabBarIcon: ({ color, size }) => (
@@ -39,7 +39,7 @@ export default function TabsLayout() {
         }}
       />
       <Tabs.Screen
-        name="Customer"
+        name="customer"
         options={{
           title: 'Hồ sơ',
           tabBarIcon: ({ color, size }) => (
